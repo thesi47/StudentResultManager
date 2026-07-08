@@ -1,0 +1,38 @@
+﻿@model IEnumerable<StudentResultManager.Entities.Student>
+<h1>All Students</h1>
+
+<a asp-action="Register">Register New student</a>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Roll No
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Registration Date
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Roll</td>
+                <td>@item.Name</td>
+                <td>@item.RegistrationDate</td>
+                <td>
+                    <a asp-action="ViewMark" class=" btn btn-primary">View Mark</a>
+                    <a asp-action="EditStudent" class="btn btn-primary">Edit Student</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

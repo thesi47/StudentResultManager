@@ -1,0 +1,19 @@
+﻿@model StudentResultManager.Models.StudentViewModel
+<h1> Enter Student Info </h1>
+
+
+<form asp-action="Register" method="post">
+    <div>
+        <label asp-for="Name">Name:</label>
+        <input type="text" />
+    </div>
+    <div>
+        <label asp-for="Roll">Roll:</label>
+        <input type="number" />
+    </div>
+    <div>
+        <label asp-for="RegistrationDate">Registration Date:</label>
+        <input type="date" />
+    </div>
+    <input type="submit" value="submit" />
+</form>

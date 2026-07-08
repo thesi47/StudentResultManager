@@ -1,0 +1,18 @@
+﻿@model StudentResultManager.Models.MarkViewModel
+<h1> Enter Student Marks </h1>
+
+
+<form asp-action="UpdateMark" method="post">
+    <div>
+        <label asp-for="ChemistryMark">Marks for Chemistry</label>
+        <input type="number" />
+    </div>
+    <div>
+        <label asp-for="PhysicsMark">Marks for Physics:</label>
+        <input type="number" />
+    </div>
+    <div>
+        <label asp-for="MathMark">Marks for Math:</label>
+        <input type="number" />
+    </div>
+</form>
