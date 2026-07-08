@@ -1,0 +1,8 @@
+==== Student Result Management System ====
+1. Register New Student
+2. Enter/Update Marks
+3. View All Students
+4. Search Student
+5. Sort Students by Marks
+6. Class Statistics (Highest/Lowest/Average)
+7. Exit
