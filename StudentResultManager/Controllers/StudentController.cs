@@ -27,7 +27,7 @@ namespace StudentResultManager.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(StudentViewModel model)
         {
-            if(ModelState.IsValid) return View(model);
+            if(!ModelState.IsValid) return View(model);
 
             Student student = new Student
             {
@@ -54,7 +54,9 @@ namespace StudentResultManager.Controllers
                 MathMark = model.MathMark,
                 ChemistryMark = model.ChemistryMark,
                 PhysicsMark = model.PhysicsMark
-            }; 
+            };
+            _context.marks.Add(mark);
+            await _context.SaveChangesAsync();
             return RedirectToAction("Index");
         }
        
